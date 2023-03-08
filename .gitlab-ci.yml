@@ -1,0 +1,16 @@
+stages:
+  - build
+
+build-run:
+  stage: build
+  tags:
+    - qa2_ssh_runner
+  only:
+    - master
+    - web
+    - schedules
+    - triggers
+  script:
+    - sudo docker stop sport_stream || true
+    - sudo docker image build -t sport_stream .
+    - sudo docker image prune -f

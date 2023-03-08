@@ -1,0 +1,1 @@
+docker run -d -e envType="uat" -e sport_item="all" -e inplay_list="all" --rm  --name sport_stream_uat_all --network=my-custom-net sport_stream:latest

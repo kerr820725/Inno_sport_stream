@@ -1,0 +1,1 @@
+docker run -d -e envType="stg" -e sport_item="all" -e inplay_list="all" --rm  --name sport_stream_stg_all --network=my-custom-net sport_stream:latest
